@@ -1,0 +1,55 @@
+{
+  "output_path": "F:/Program/TTS/my_tts_model",
+  "eval_split_size": 0.05,
+
+"datasets": [
+  {
+    "name": "my_dataset",
+    "path": "F:/Program/TTS/my_dataset",
+    "format": "minimal"
+  }
+],
+  "model": "tacotron2",
+  "run_name": "baker_tacotron2_ddc_gst",
+  "num_loader_workers": 2,
+  "batch_size": 32,
+  "eval_batch_size": 16,
+  "epochs": 1000,
+  "save_step": 5000,
+  "eval_step": 5000,
+  "print_step": 25,
+  "mixed_precision": true,
+  "run_eval": true,
+  "test_delay_epochs": 5,
+  "distributed": false,
+  "r": 2,
+  "grad_clip": 1.0,
+  "scheduler": "cosine",
+  "lr": 0.0001,
+  "optimizer": "Adam",
+  "warmup_steps": 4000,
+  "use_gst": false,
+  "num_gst": 10,
+  "num_heads": 4,
+  "loss_masking": true,
+  "phoneme_cache_path": "F:/Program/TTS/my_tts_model/.phoneme_cache",
+  "num_eval_samples": 4,
+  "phoneme_language": "zh",
+"characters": {
+  "pad": "_",
+  "eos": "~",
+  "bos": "^",
+  "blank": null,
+  "characters_class": "TTS.tts.utils.text.characters.Graphemes",
+  "characters": "你好欢迎来到我的语音模型训练项目今天天气真不错适合出去散步请给我一杯热水谢谢人工智能正在改变我们的生活方式你吃饭了吗我很高兴见到你这是一段用于语音训练的示例语句请在下一个路口向左转我来自中国我说普通话希望你度过愉快的一天今晚的月亮真圆我喜欢阅读写作和听音乐请把窗户打开一下今天是星期六我们去公园玩吧他正在准备明天的考试电脑突然蓝屏了我很无语请尽快完成这项工作我爱你就像老鼠爱大米学习是一种习惯祝你好运一切顺利",
+  "punctuations": "。，！？；：“”、‘’—…",
+  "is_unique": true,
+  "is_sorted": false
+},
+  "use_phonemes": false,
+  "compute_input_seq_cache": true,
+  "compute_f0": false,
+  "compute_energy": false,
+  "precompute_num_workers": 2,
+  "gst": null
+}
